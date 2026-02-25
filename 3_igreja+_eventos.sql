@@ -1,0 +1,11 @@
+USE igreja+_system;
+
+DROP TABLE IF EXISTS evento;
+CREATE TABLE evento (
+    id INT(11) UNSIGNED NOT NULL  AUTO_INCREMENT PRIMARY KEY,
+    NomeEvento VARCHAR(100) NOT NULL,
+    DataHoraInicio DATETIME NOT NULL,
+    DataHoraFim DATETIME NOT NULL,
+    Local VARCHAR(150)
+    PRIMARY KEY(id)
+)
