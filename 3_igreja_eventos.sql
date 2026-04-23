@@ -8,6 +8,5 @@ CREATE TABLE eventos (
     dataHoraInicio DATETIME NOT NULL,
     nomeEvento VARCHAR(255) NOT NULL,
     tipoEvento VARCHAR(100) NOT NULL,
-    PRIMARY KEY(id),
     FOREIGN KEY (id_user) REFERENCES users(id)
 )
