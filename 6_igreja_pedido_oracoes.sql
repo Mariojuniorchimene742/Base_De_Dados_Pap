@@ -10,3 +10,6 @@ CREATE TABLE pedido_oracoes (
     descricao TEXT NOT NULL,
     FOREIGN KEY (id_user) REFERENCES users(id) 
 );
+
+INSERT INTO pedido_oracoes (id_user, email, tipoPedido, descricao)
+VALUES (1, 'chimenemariojorge@gmail.com', 'Saúde', 'Peço orações pela saúde do meu pai, que está enfrentando um tratamento difícil.');

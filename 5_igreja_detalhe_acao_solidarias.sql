@@ -9,3 +9,8 @@ CREATE TABLE detalhe_acao_solidarias (
     comoAjudar TEXT NOT NULL,
     FOREIGN KEY (id_acao_solidaria) REFERENCES acao_solidarias(id)
 );
+INSERT INTO detalhe_acao_solidarias(id_acao_solidaria, descricao, comoAjudar)
+Values
+(1,'Ação de doação de alimentos para famílias carentes.','Doe alimentos não perecíveis, como arroz, feijão, macarrão, enlatados e óleo.'),
+(2,'Visita a asilo para levar alegria e companhia aos idosos.','Participe das visitas levando palavras de conforto, música ou atividades recreativas.'),
+(3,'Campanha de arrecadação de agasalhos para pessoas em situação de rua.','Doe agasalhos em bom estado, como casacos, blusas, cobertores e calçados.');
