@@ -28,3 +28,7 @@ VALUES
 (8, 'Almada', '2800-444', '919012345', 3, 'Desemprego recente, apoio necessário'),
 (9, 'Barreiro', '2830-555', '910123456', 2, 'Apoio financeiro e alimentação'),
 (10, 'Mafra', '2640-666', '911234567', 5, 'Família precisa de apoio geral');
+
+
+
+SELECT * FROM apoio_sociais;
