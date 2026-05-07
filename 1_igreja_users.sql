@@ -7,6 +7,8 @@ CREATE TABLE users (
     nome VARCHAR(255) NOT NULL,
     telefone VARCHAR(20) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
+    data_resgito VARCHAR(20) NOT NULL,
+    estado VARCHAR(20) NOT NULL,
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
