@@ -87,4 +87,6 @@ SELECT * FROM apoio_sociais;
 SELECT * FROM eventos;
 SELECT * FROM acao_solidarias;
 SELECT * FROM detalhe_acao_solidarias;
+
 SELECT * FROM pedido_oracoes;
+SELECT * FROM email_verifications;
