@@ -3,15 +3,15 @@ USE igreja_system;
 -- Inserção de dados na tabela users    
 INSERT INTO users (is_admin, nome, telefone, email, estado, password) VALUES
 (1, 'Gerry', '912345678', '35420@esjaloures.org', 'ativo', '$2y$10$uT2rgweFd5L5RJ/9/uKrkeI2rDIbZi2EwMR76WSaeN7xZ5l3kFg4S'),
-(0, 'Fabio Vitoriano', '934567890', 'fabio.vitoriano@email.com', 'ativo', '1234'),
-(0, 'Davi Clemente', '987654321', 'davi.clemente@email.com', 'ativo', '1234'),
-(0, 'Francisco Prino', '923456789', 'francisco.prino@email.com', 'ativo', '1234'),
-(0, 'Gerry Trindade', '915678234', 'gerry.trindade@email.com', 'ativo', '1234'),
-(0, 'Henrique Morais', '936789451', 'henrique.morais@email.com', 'ativo', '1234'),
-(0, 'Karamjit Singh', '918234567', 'karamjit.singh@email.com', 'ativo', '1234'),
-(0, 'Mario Junior', '932674987', 'mario.junior@email.com', 'ativo', '1234'),
-(0, 'Marco Figueiredo', '914567890', 'marco.figueiredo@email.com', 'ativo', '1234'),
-(0, 'Rodrigo Andraz', '937654123', 'rodrigo.andraz@email.com', 'ativo', '1234');
+(0, 'Fabio Vitoriano', '934567890', 'fabio.vitoriano@email.com', 'ativo', 123),
+(0, 'Davi Clemente', '987654321', 'davi.clemente@email.com', 'ativo', 123),
+(0, 'Francisco Prino', '923456789', 'francisco.prino@email.com', 'ativo', 123),
+(0, 'Gerry Trindade', '915678234', 'gerry.trindade@email.com', 'ativo', 123),
+(0, 'Henrique Morais', '936789451', 'henrique.morais@email.com', 'ativo', 123),
+(0, 'Karamjit Singh', '918234567', 'karamjit.singh@email.com', 'ativo', 123),
+(0, 'Mario Junior', '932674987', 'mario.junior@email.com', 'ativo', 123),
+(0, 'Marco Figueiredo', '914567890', 'marco.figueiredo@email.com', 'ativo', 123),
+(0, 'Rodrigo Andraz', '937654123', 'rodrigo.andraz@email.com', 'ativo', 123);
 
 -- Inserção de dados na tabela apoio sociais
 INSERT INTO apoio_sociais (id_user, local, codigoPostal, telefone, membrosDeFamilia, pedidoAjuda)
