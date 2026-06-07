@@ -1,3 +1,84 @@
+DROP DATABASE IF EXISTS igreja_system;
+
+CREATE DATABASE igreja_system;
+
+USE igreja_system;
+
+USE igreja_system;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    is_admin BOOLEAN NOT NULL DEFAULT FALSE,
+    nome VARCHAR(255) NOT NULL,
+    telefone VARCHAR(20) UNIQUE  NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    data_registro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    estado VARCHAR(20)  NULL,
+    password VARCHAR(255) NOT NULL,
+    is_verified TINYINT(1) DEFAULT 0,
+    PRIMARY KEY (id)
+);
+
+USE igreja_system;
+
+DROP TABLE IF EXISTS apoio_sociais;
+
+CREATE TABLE apoio_sociais(
+    id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    id_user INT(11) UNSIGNED NOT NULL,
+    local VARCHAR(255) NOT NULL,
+    codigo_postal VARCHAR(10) NOT NULL,
+    telefone VARCHAR(20) UNIQUE NOT NULL,
+    membros_de_familia INT NOT NULL,
+    pedido_ajuda TEXT NOT NULL,
+
+    PRIMARY KEY(id),
+    FOREIGN KEY (id_user) REFERENCES users(id)
+);
+
+USE igreja_system;
+
+DROP TABLE IF EXISTS eventos;
+
+CREATE TABLE eventos (
+    id INT(11) UNSIGNED NOT NULL  AUTO_INCREMENT,
+    id_users INT(11) UNSIGNED NOT NULL,
+    data_hora_inicio DATETIME NOT NULL,
+    nome_evento VARCHAR(255) NOT NULL,
+    tipo_evento VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_users) REFERENCES users(id)
+);
+
+USE igreja_system;
+
+DROP TABLE IF EXISTS acao_solidarias;
+
+CREATE TABLE acao_solidarias (
+    id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
+    id_user INT(11) UNSIGNED NOT NULL,
+    data_hora_inicio DATETIME NOT NULL,
+    nome_acao VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_user) REFERENCES users(id)
+);
+
+USE igreja_system;
+
+DROP TABLE IF EXISTS pedido_oracoes;
+
+CREATE TABLE pedido_oracoes (
+    id INT(11) AUTO_INCREMENT NOT NULL,
+    id_user INT(11) UNSIGNED NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    tipo_pedido VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_user) REFERENCES users(id) 
+);
+
 USE igreja_system;
 
 -- Inserção de dados na tabela users    
@@ -14,7 +95,7 @@ INSERT INTO users (is_admin, nome, telefone, email, estado, password) VALUES
 (0, 'Rodrigo Andraz', '937654123', 'rodrigo.andraz@email.com', 'ativo', 123);
 
 -- Inserção de dados na tabela apoio sociais
-INSERT INTO apoio_sociais (id_user, local, codigo_postal, telefone, membrosDeFamilia, pedidoAjuda)
+INSERT INTO apoio_sociais (id_user, local, codigo_postal, telefone, membros_de_familia, pedido_ajuda)
 VALUES
 (1, 'Lisboa', '1000-001', '912345678', 4, 'Precisamos de alimentos e roupas'),
 (2, 'Loures', '2670-123', '913456789', 3, 'Apoio financeiro urgente'),
@@ -42,7 +123,7 @@ VALUES
 (10,'2024-07-10 18:00:00','Aula de dança','cultural');
 
 --- Inserção de dados na tabela acao solidarias
-INSERT INTO acao_solidarias(id_user,dataHoraInicio,nomeAcao)
+INSERT INTO acao_solidarias(id_user,data_hora_inicio,nome_acao)
 Values
 (1,'2024-07-01 10:00:00','Doação de alimentos'),
 (2,'2024-07-02 19:00:00','Visita a asilo'),
@@ -56,7 +137,7 @@ Values
 (10,'2024-07-10 18:00:00','Ação de apoio a refugiados');
 
 --- Insersão de dados na tabela pedido orações
-INSERT INTO pedido_oracoes (id_user, email, tipoPedido, descricao)
+INSERT INTO pedido_oracoes (id_user, email, tipo_pedido, descricao)
 VALUES 
 (1, 'chimenejorge@gmail.com', 'Saúde', 'Peço orações pela saúde do meu pai, que está em tratamento.'),
 (2, 'ana.silva@gmail.com', 'Família', 'Peço oração pela união da minha família.'),
@@ -67,11 +148,3 @@ VALUES
 (7, 'ricardo.mendes@gmail.com', 'Estudos', 'Peço oração para conseguir foco e sucesso nos estudos.'),
 (8, 'fatima.costa@gmail.com', 'Família', 'Peço oração pela restauração do meu casamento.');
 
-
-SELECT * FROM users;
-SELECT * FROM apoio_sociais;
-SELECT * FROM eventos;
-SELECT * FROM acao_solidarias;
-
-SELECT * FROM pedido_oracoes;
-SELECT * FROM email_verifications;
