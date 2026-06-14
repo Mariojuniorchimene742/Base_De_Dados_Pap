@@ -8,8 +8,13 @@ CREATE TABLE users (
     nome VARCHAR(255) NOT NULL,
     telefone VARCHAR(20) UNIQUE NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
+<<<<<<< HEAD
     data_resgito TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     estado VARCHAR(20) NULL,
+=======
+    data_registro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    estado VARCHAR(20)  NULL,
+>>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
     password VARCHAR(255) NOT NULL,
     is_verified TINYINT(1) DEFAULT 0,
     updated_at TIMESTAMP NULL DEFAULT NULL,

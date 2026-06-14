@@ -1,8 +1,26 @@
 USE igreja_system;
 
+<<<<<<< HEAD
   
 INSERT INTO users 
 (is_admin, nome, telefone, email, estado, password) 
+=======
+-- Inserção de dados na tabela users    
+INSERT INTO users (is_admin, nome, telefone, email, estado, password) VALUES
+(1, 'Gerry', '912345678', '35420@esjaloures.org', 'ativo', '$2y$10$uT2rgweFd5L5RJ/9/uKrkeI2rDIbZi2EwMR76WSaeN7xZ5l3kFg4S'),
+(0, 'Fabio Vitoriano', '934567890', 'fabio.vitoriano@email.com', 'ativo', 123),
+(0, 'Davi Clemente', '987654321', 'davi.clemente@email.com', 'ativo', 123),
+(0, 'Francisco Prino', '923456789', 'francisco.prino@email.com', 'ativo', 123),
+(0, 'Gerry Trindade', '915678234', 'gerry.trindade@email.com', 'ativo', 123),
+(0, 'Henrique Morais', '936789451', 'henrique.morais@email.com', 'ativo', 123),
+(0, 'Karamjit Singh', '918234567', 'karamjit.singh@email.com', 'ativo', 123),
+(0, 'Mario Junior', '932674987', 'mario.junior@email.com', 'ativo', 123),
+(0, 'Marco Figueiredo', '914567890', 'marco.figueiredo@email.com', 'ativo', 123),
+(0, 'Rodrigo Andraz', '937654123', 'rodrigo.andraz@email.com', 'ativo', 123);
+
+-- Inserção de dados na tabela apoio sociais
+INSERT INTO apoio_sociais (id_user, local, codigo_postal, telefone, membrosDeFamilia, pedidoAjuda)
+>>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
 VALUES
 (1, 'Gerry', '912345678', '35420@esjaloures.org', 'ativo', '$2y$10$uT2rgweFd5L5RJ/9/uKrkeI2rDIbZi2EwMR76WSaeN7xZ5l3kFg4S'),
 (0, 'Fabio Vitoriano', '934567890', 'fabio.vitoriano@email.com', 'ativo', '123'),
@@ -30,9 +48,14 @@ VALUES
 (9, 'Barreiro', '2830-555', '910123456', 2, 'Apoio financeiro e alimentação'),
 (10, 'Mafra', '2640-666', '911234567', 5, 'Família precisa de apoio geral');
 
+<<<<<<< HEAD
 
 INSERT INTO eventos 
 (id_users, data_hora_inicio, nome_evento, tipo_evento)
+=======
+--- Inserção de dados na tabela eventos
+INSERT INTO eventos (id_users,data_hora_inicio,nome_evento,tipo_evento)
+>>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
 VALUES
 (1, '2024-07-01 10:00:00', 'Culto de Domingo', 'Religioso'),
 (2, '2024-07-02 19:00:00', 'Reunião de jovens', 'Social'),
@@ -46,6 +69,7 @@ VALUES
 (10, '2024-07-10 18:00:00', 'Aula de dança', 'Cultural');
 
 
+<<<<<<< HEAD
 INSERT INTO acao_solidarias 
 (id_user, data_hora_inicio, nome_acao)
 VALUES
@@ -78,6 +102,10 @@ VALUES
 
 INSERT INTO pedido_oracoes 
 (id_user, email, tipo_pedido, descricao)
+=======
+--- Insersão de dados na tabela pedido orações
+INSERT INTO pedido_oracoes (id_user, email, tipoPedido, descricao)
+>>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
 VALUES 
 (1, 'chimenejorge@gmail.com', 'Saúde', 'Peço orações pela saúde do meu pai, que está em tratamento.'),
 (2, 'ana.silva@gmail.com', 'Família', 'Peço oração pela união da minha família.'),
@@ -95,6 +123,10 @@ SELECT * FROM users;
 SELECT * FROM apoio_sociais;
 SELECT * FROM eventos;
 SELECT * FROM acao_solidarias;
+<<<<<<< HEAD
 SELECT * FROM detalhe_acao_solidarias;
+=======
+
+>>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
 SELECT * FROM pedido_oracoes;
 SELECT * FROM email_verifications;
