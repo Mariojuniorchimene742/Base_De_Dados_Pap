@@ -1,27 +1,7 @@
 USE igreja_system;
 
-<<<<<<< HEAD
-  
-INSERT INTO users 
-(is_admin, nome, telefone, email, estado, password) 
-=======
--- Inserção de dados na tabela users    
+-- Inserção de dados na tabela users
 INSERT INTO users (is_admin, nome, telefone, email, estado, password) VALUES
-(1, 'Gerry', '912345678', '35420@esjaloures.org', 'ativo', '$2y$10$uT2rgweFd5L5RJ/9/uKrkeI2rDIbZi2EwMR76WSaeN7xZ5l3kFg4S'),
-(0, 'Fabio Vitoriano', '934567890', 'fabio.vitoriano@email.com', 'ativo', 123),
-(0, 'Davi Clemente', '987654321', 'davi.clemente@email.com', 'ativo', 123),
-(0, 'Francisco Prino', '923456789', 'francisco.prino@email.com', 'ativo', 123),
-(0, 'Gerry Trindade', '915678234', 'gerry.trindade@email.com', 'ativo', 123),
-(0, 'Henrique Morais', '936789451', 'henrique.morais@email.com', 'ativo', 123),
-(0, 'Karamjit Singh', '918234567', 'karamjit.singh@email.com', 'ativo', 123),
-(0, 'Mario Junior', '932674987', 'mario.junior@email.com', 'ativo', 123),
-(0, 'Marco Figueiredo', '914567890', 'marco.figueiredo@email.com', 'ativo', 123),
-(0, 'Rodrigo Andraz', '937654123', 'rodrigo.andraz@email.com', 'ativo', 123);
-
--- Inserção de dados na tabela apoio sociais
-INSERT INTO apoio_sociais (id_user, local, codigo_postal, telefone, membrosDeFamilia, pedidoAjuda)
->>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
-VALUES
 (1, 'Gerry', '912345678', '35420@esjaloures.org', 'ativo', '$2y$10$uT2rgweFd5L5RJ/9/uKrkeI2rDIbZi2EwMR76WSaeN7xZ5l3kFg4S'),
 (0, 'Fabio Vitoriano', '934567890', 'fabio.vitoriano@email.com', 'ativo', '123'),
 (0, 'Davi Clemente', '987654321', 'davi.clemente@email.com', 'ativo', '123'),
@@ -33,10 +13,8 @@ VALUES
 (0, 'Marco Figueiredo', '914567890', 'marco.figueiredo@email.com', 'ativo', '123'),
 (0, 'Rodrigo Andraz', '937654123', 'rodrigo.andraz@email.com', 'ativo', '123');
 
-
-INSERT INTO apoio_sociais 
-(id_user, local, codigo_postal, telefone, membros_de_familia, pedido_ajuda)
-VALUES
+-- Inserção de dados na tabela apoio_sociais
+INSERT INTO apoio_sociais (id_user, local, codigo_postal, telefone, membros_de_familia, pedido_ajuda) VALUES
 (1, 'Lisboa', '1000-001', '912345679', 4, 'Precisamos de alimentos e roupas'),
 (2, 'Loures', '2670-123', '913456789', 3, 'Apoio financeiro urgente'),
 (3, 'Odivelas', '2675-456', '914567891', 5, 'Alimentos para família numerosa'),
@@ -48,15 +26,8 @@ VALUES
 (9, 'Barreiro', '2830-555', '910123456', 2, 'Apoio financeiro e alimentação'),
 (10, 'Mafra', '2640-666', '911234567', 5, 'Família precisa de apoio geral');
 
-<<<<<<< HEAD
-
-INSERT INTO eventos 
-(id_users, data_hora_inicio, nome_evento, tipo_evento)
-=======
---- Inserção de dados na tabela eventos
-INSERT INTO eventos (id_users,data_hora_inicio,nome_evento,tipo_evento)
->>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
-VALUES
+-- Inserção de dados na tabela eventos
+INSERT INTO eventos (id_users, data_hora_inicio, nome_evento, tipo_evento) VALUES
 (1, '2024-07-01 10:00:00', 'Culto de Domingo', 'Religioso'),
 (2, '2024-07-02 19:00:00', 'Reunião de jovens', 'Social'),
 (3, '2024-07-03 18:00:00', 'Aula de música', 'Cultural'),
@@ -68,11 +39,8 @@ VALUES
 (9, '2024-07-09 19:00:00', 'Reunião de líderes', 'Social'),
 (10, '2024-07-10 18:00:00', 'Aula de dança', 'Cultural');
 
-
-<<<<<<< HEAD
-INSERT INTO acao_solidarias 
-(id_user, data_hora_inicio, nome_acao)
-VALUES
+-- Inserção de dados na tabela acao_solidarias
+INSERT INTO acao_solidarias (id_user, data_hora_inicio, nome_acao) VALUES
 (1, '2024-07-01 10:00:00', 'Doação de alimentos'),
 (2, '2024-07-02 19:00:00', 'Visita a asilo'),
 (3, '2024-07-03 18:00:00', 'Campanha de agasalhos'),
@@ -84,29 +52,21 @@ VALUES
 (9, '2024-07-09 19:00:00', 'Doação de roupas'),
 (10, '2024-07-10 18:00:00', 'Ação de apoio a refugiados');
 
-
-INSERT INTO detalhe_acao_solidarias 
-(id_acao_solidaria, descricao, como_ajudar)
-VALUES
+-- Inserção de dados na tabela detalhe_acao_solidarias
+INSERT INTO detalhe_acao_solidarias (id_acao_solidaria, descricao, como_ajudar) VALUES
 (1, 'Ação de doação de alimentos para famílias carentes.', 'Doe alimentos não perecíveis, como arroz, feijão, macarrão, enlatados e óleo.'),
 (2, 'Visita a asilo para levar alegria e companhia aos idosos.', 'Participe das visitas levando palavras de conforto, música ou atividades recreativas.'),
 (3, 'Campanha de arrecadação de agasalhos para pessoas em situação de rua.', 'Doe agasalhos em bom estado, como casacos, blusas, cobertores e calçados.'),
 (4, 'Ação de limpeza de praia para preservar o meio ambiente.', 'Participe da limpeza levando sacos de lixo, luvas e disposição para ajudar a manter as praias limpas.'),
-(5, 'Doação de sangue para salvar vidas.', 'Doe sangue em um banco de sangue próximo, seguindo os requisitos de doação.'),
+(5, 'Doação de sangue para salvar vidas.', 'Doe sangue num banco de sangue próximo, seguindo os requisitos de doação.'),
 (6, 'Ação de plantio de árvores para contribuir com a sustentabilidade.', 'Participe do plantio levando mudas de árvores e ajudando a cuidar delas.'),
 (7, 'Campanha de arrecadação de brinquedos para crianças carentes.', 'Doe brinquedos novos ou usados em bom estado para alegrar crianças necessitadas.'),
 (8, 'Ação de apoio a moradores de rua com distribuição de kits de higiene e alimentos.', 'Participe da distribuição levando kits de higiene, roupas e alimentos prontos para consumo.'),
 (9, 'Doação de roupas para pessoas em situação de vulnerabilidade social.', 'Doe roupas em bom estado, especialmente agasalhos, calçados e roupas íntimas.'),
 (10, 'Ação de apoio a refugiados com doação de itens essenciais e integração social.', 'Participe doando alimentos, roupas, produtos de higiene e oferecendo apoio na integração social.');
 
-
-INSERT INTO pedido_oracoes 
-(id_user, email, tipo_pedido, descricao)
-=======
---- Insersão de dados na tabela pedido orações
-INSERT INTO pedido_oracoes (id_user, email, tipoPedido, descricao)
->>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
-VALUES 
+-- Inserção de dados na tabela pedido_oracoes
+INSERT INTO pedido_oracoes (id_user, email, tipo_pedido, descricao) VALUES
 (1, 'chimenejorge@gmail.com', 'Saúde', 'Peço orações pela saúde do meu pai, que está em tratamento.'),
 (2, 'ana.silva@gmail.com', 'Família', 'Peço oração pela união da minha família.'),
 (3, 'joao.pereira@gmail.com', 'Trabalho', 'Estou desempregado e preciso de oração para conseguir um novo emprego.'),
@@ -116,17 +76,26 @@ VALUES
 (7, 'ricardo.mendes@gmail.com', 'Estudos', 'Peço oração para conseguir foco e sucesso nos estudos.'),
 (8, 'fatima.costa@gmail.com', 'Família', 'Peço oração pela restauração do meu casamento.');
 
+-- Exemplos para as novas funcionalidades
+INSERT INTO notificacoes (id_user, titulo, mensagem, tipo, lida) VALUES
+(NULL, 'Bem-vindo à aplicação', 'A igreja agora tem notificações para avisos gerais e novidades.', 'Geral', 0),
+(1, 'Pedido recebido', 'O teu pedido foi registado com sucesso.', 'Informação', 0);
 
+INSERT INTO contribuicoes (id_user, tipo, valor, metodo_pagamento, observacao, estado) VALUES
+(1, 'Dízimo', 25.00, 'MB Way', 'Contribuição mensal', 'Pendente'),
+(2, 'Oferta', 10.00, 'Transferência', 'Oferta especial', 'Confirmado');
 
+INSERT INTO ministerios_inscricoes (id_user, ministerio, experiencia, disponibilidade, mensagem, estado) VALUES
+(1, 'Louvor', 'Já participei no grupo de louvor.', 'Domingo de manhã', 'Gostaria de servir com música.', 'Pendente'),
+(2, 'Multimédia', 'Tenho experiência com som e projeção.', 'Cultos de domingo', 'Posso ajudar na parte técnica.', 'Aprovado');
 
 SELECT * FROM users;
 SELECT * FROM apoio_sociais;
 SELECT * FROM eventos;
 SELECT * FROM acao_solidarias;
-<<<<<<< HEAD
 SELECT * FROM detalhe_acao_solidarias;
-=======
-
->>>>>>> 3cc797c222e32bcdf396579560bf0dded29b366a
 SELECT * FROM pedido_oracoes;
+SELECT * FROM notificacoes;
+SELECT * FROM contribuicoes;
+SELECT * FROM ministerios_inscricoes;
 SELECT * FROM email_verifications;
